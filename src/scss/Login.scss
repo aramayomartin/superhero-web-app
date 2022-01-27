@@ -1,0 +1,426 @@
+// import
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+// Variabes
+$main-font: 'Dongle';
+$light-color: #8b2323;
+$dark-color: #1C1C1C;
+$gray-color: #c4c4c4;
+// Reset
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//Main styling
+body,html {
+    background-image: url("../images/background-landing.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+h1{
+    font-size:2rem;
+    text-transform: uppercase;
+}
+label{
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+//Utility Classes
+.container-form{
+    margin:auto;
+    max-width: 1300px;
+    overflow:auto;
+    padding: 0 10px;
+
+    background-color: $light-color;
+    height:25vh;
+    width:100vh;
+    border-radius: 10px;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top:28rem;    
+} 
+
+.form-elements{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 1rem;
+
+    &-email{
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+        align-items:flex-start;
+    }
+    &-password{
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+        align-items:flex-start;
+    }
+    &-error-message{
+        color:white;
+        margin-left:1rem;
+    }
+}
+.button{
+    display:inline-block;
+    font-size: 18px;
+    color:white;
+    background-color:$dark-color;
+    border:none;
+    padding: 5px 10px;
+    cursor:pointer;
+    border-radius: 5px;
+    margin-bottom:0.5rem;
+}
+.button:hover{
+    background: lighten($dark-color,10%);
+}
+
+// SEARCH BAR
+.home-form-search{
+    display:flex;
+    align-items:center;
+    margin-top:1rem;
+    margin-left:1rem;
+    &-input{
+        font-size:1.5rem;
+        border-radius:1rem;
+    }
+    &-button{
+        height:2.3rem;
+        width:2.3rem;
+        font-size:1rem;
+        border-radius:99rem;
+        color:$gray-color;
+        background-color: $dark-color;
+        font-weight:bold;
+        &:hover{
+            background-color:$gray-color;
+            color: $dark-color;
+            cursor:pointer;
+        }
+    }
+}
+
+// HOME
+.home-nav{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background-color:$light-color;
+    padding-bottom:1rem;
+    margin-bottom:2rem;
+    &-button-myteam{
+        font-size:1rem;
+        margin-top:1rem;
+        margin-right: 1rem;
+        
+        padding-left:0.5rem;
+        padding-right:0.5rem;
+
+        height: 2.3rem;
+        width: auto;
+
+        border-radius:99rem;
+        color:$gray-color;
+        background-color: $dark-color;
+        font-weight:bold;
+        &:hover{
+            background-color:$gray-color;
+            color: $dark-color;
+            cursor:pointer;
+        }
+    }
+}
+.title{
+    color:$gray-color;
+    background-color:$light-color;
+    display:inline;
+    margin-top:2rem;    
+    padding:1rem;
+    border-radius:1rem;
+
+}
+
+// SEARCH CARD
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+
+    margin-right: 2rem;
+    margin-left:2rem;
+    margin-bottom:2rem;
+}
+.card{
+    background-color: $dark-color;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:2rem;
+    border:$light-color 2px solid;
+    border-radius:10px;
+    &:hover{
+        background-color: $light-color;
+    }
+
+    &-name{
+        color:$gray-color;
+        margin-top:1rem;
+        margin-bottom:1rem;
+    }
+    &-image{
+        max-width: 20rem;
+        max-height: auto;
+        border-radius:10px;
+    }
+    &-button{
+        font-size:1rem;
+        margin-top:1rem;
+        margin-bottom:1rem;    
+        
+        padding-left:0.5rem;
+        padding-right:0.5rem;
+
+        height: 2.3rem;
+        width: auto;
+
+        border-radius:99rem;
+        color:$gray-color;
+        background-color: $light-color;
+        font-weight:bold;
+        &:hover{
+            background-color:$gray-color;
+            color: $dark-color;
+            cursor:pointer;
+        }
+    }
+
+}
+
+    // CARD TEAM
+    .cards-team{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1rem;
+    
+        margin-right: 2rem;
+        margin-left:2rem;
+        margin-bottom:2rem;
+    }
+    .card-team{
+        background-color: $dark-color;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-top:2rem;
+        border:$light-color 2px solid;
+        border-radius:10px;
+        &-name{
+            color:$gray-color;
+            margin-top:1rem;
+            margin-bottom:1rem;
+        }
+        &-text{
+            color:$gray-color;
+            margin-top:0;
+            margin-bottom:0;
+        }
+        &-image{
+            max-width: 10rem;
+            max-height: auto;
+            border-radius:10px;
+        }
+        &-buttons{
+            display:flex;
+            flex-direction:row;
+            align-items: space-around;
+            justify-content: space-around;
+        }
+        &-button{
+            font-size:1rem;
+            margin-top:1rem;
+            margin-bottom:1rem;    
+            
+            padding-left:0.5rem;
+            padding-right:0.5rem;
+    
+            height: 2.3rem;
+            width: auto;
+    
+            border-radius:99rem;
+            color:$gray-color;
+            background-color: $light-color;
+            font-weight:bold;
+            &:hover{
+                background-color:$gray-color;
+                color: $dark-color;
+                cursor:pointer;
+            }
+        }
+    }
+// DETAIL
+.detail{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.detail-button{
+        font-size:1rem;
+        margin-top:1rem;
+        margin-bottom:1rem;    
+        
+        padding-left:0.5rem;
+        padding-right:0.5rem;
+
+        height: 2.3rem;
+        width: auto;
+
+        border-radius:99rem;
+        color:$gray-color;
+        background-color: $light-color;
+        font-weight:bold;
+        &:hover{
+            background-color:$gray-color;
+            color: $dark-color;
+            cursor:pointer;
+        }
+}
+.card-detail{
+    background-color:$light-color;
+
+    width: 60%;
+    height: auto;
+    border-radius: 1rem;
+    padding:1rem;
+    &-name{
+        font-size:3rem;
+    }
+    &-elements{
+        display:flex;
+        flex-direction: row;
+        margin-top: 1rem;
+        &-image{
+            border-radius:2rem;
+            max-height: 30rem;
+        }
+        &-info{
+            font-weight: 700;
+            display:flex;
+            flex-direction: column;
+            align-items:flex-start;
+            justify-content: center;
+            margin-left: 1rem;
+            margin-bottom:7rem;
+            
+        }
+        &-text{
+            font-size:2rem;
+        }
+    }
+}
+// MY TEAM
+.my-team{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+
+    &-title{
+        color:$gray-color;
+        background-color:$light-color;
+        display:inline;
+        margin-top:2rem;    
+        padding:1rem;
+        border-radius:1rem;
+        font-size:1rem;
+    }
+    &-button{
+        font-size:1rem;
+        margin-top:1rem;
+        margin-bottom:1rem;    
+        
+        padding-left:0.5rem;
+        padding-right:0.5rem;
+
+        height: 2.3rem;
+        width: auto;
+
+        border-radius:99rem;
+        color:$gray-color;
+        background-color: $light-color;
+        font-weight:bold;
+        &:hover{
+            background-color:$gray-color;
+            color: $dark-color;
+            cursor:pointer;
+        } 
+    }
+    &-images{
+        margin-right: 2rem;
+        margin-left:2rem;
+        margin-top:1rem;
+        border-radius:1rem;
+
+        background-color:$light-color;
+        width:90%;
+
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &-image{
+            max-width: 10rem;
+            max-height: auto;
+            border-radius:10px;
+            margin:1rem;
+        }
+    }
+    &-data{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+
+        width:90%;
+        margin-top:2rem;
+
+        &-title{
+            color:$gray-color;
+            background-color:$light-color;
+            display:inline;
+            margin-top:2rem;    
+            padding:1rem;
+            border-radius:1rem;
+            font-size:1rem;
+        }
+        &-stats{
+            background-color:$light-color;
+            margin-top:2rem;
+            margin-bottom:2rem;
+            border-radius:2rem;
+
+            width:18rem;
+            padding:1rem;
+
+            color:white;
+            font-size:2rem;
+
+            display:flex;
+            flex-direction:column;
+            align-items:flex-start;
+
+        }
+
+    }
+}
