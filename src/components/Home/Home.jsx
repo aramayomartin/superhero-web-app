@@ -3,7 +3,6 @@ import SearchCard from '../SearchCard/SearchCard';
 import SearchBar from '../SearchBar/SearchBar';
 import Team from '../Team/Team';
 import { Link } from 'react-router-dom';
-import { RiTeamLine } from 'react-icons/ri';
 export default function Home({ searched, favs, getSuperheroByName, addFavorite, deleteFromMyTeam }) {
     return (
         <>
